@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,500|Prompt:300,400,500');
+.book_tab{
+    margin-top:3%;
+    width: 58%;
+    margin: auto;
+}
+#duplicateRecordErr, #submitedSucess{
+    display: none;
+}
+.max-width{
+    width:100% !important;
+}
+.sucess{
+    color: #05e008;
+    background-color: #03210d;
+    border:1px solid #05e008;
+}
+.danger{
+    color: #f71d35;
+    background-color: #33060a;
+    border-color:1px solid #f71d35;
+}
+.alert {
+    position: relative;
+    padding: 15px !important;
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+}
+.book_form{
+    display: flex;
+    padding: 10% 5% 5% 5%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.browser_tab{
+    width:100% !important;
+    height: 20px;
+    background-color: #FEED00;
+    position: absolute;
+    display: flex;
+    align-content: center;
+    top:0;
+    left: 0;
+
+}
+
+.circle_wrapper{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 60px;
+    margin-top: 5px;
+}
+.circle{
+    width:10px;
+    height:10px;
+    border-radius: 100000px;
+}
+
+.green{
+    background-color: #008000;
+}
+
+.red{
+    background-color: #FF0000;
+}
+
+.yellow{
+    background-color: #FEFF00;
+}
+
+.book_form > div{
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+.book_form > div >  label{
+    color: #525252;
+    font-family: Prompt;
+    font-weight: 400;
+}
+
+.book_form > div >  label >span{
+    color: #f71d35;
+}
+.book_form > div >  input,
+.book_form > div > input:focus,
+.book_form > div >  select{
+    color: #525252 ;
+    background-color: #F8F9FA;
+    font-family: 'Bai Jamjuree';
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border:1px solid #E8EEF2;
+}
+
+::-webkit-input-placeholder {
+    color:#c6c6c6;
+}
+
+::-moz-placeholder {
+    color:#c6c6c6;
+}
+
+::-ms-placeholder {
+    color:#c6c6c6;
+}
+
+::placeholder {
+    color:#c6c6c6;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #525252;
+    border:1px solid #FEED00;
+    background: none;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.book_form > div > button{
+    border:none;
+    padding : 10px 0 10px 0;
+    background-color: #FEED00;
+    color: #000000;
+    font-family: Prompt;
+    width: 40%;
+    margin: auto;
+    font-size: 1.3em;
+    font-weight: 400;
+    border-radius: 10px;
+
+}
+
+
+
+.book_form > div >  textarea{
+    color: #ACACAC;
+    padding: 1%;
+    height: 200px;
+    border:1px solid #FEED00;
+    background: none;
+}
+
+
+@media only screen and (max-width: 720px){
+    .book_form > div{
+        width: 46%;
+        
+    }
+    .book_tab{
+        width: 100%;
+    }
+    .book_form{
+        padding-top: 20%;
+    }
+
+    .circle_wrapper{
+        margin-top: 15px;
+    }
+
+    .book_form > div > button{
+        width: 100%;
+        margin-top:10px;
+    }
+}
