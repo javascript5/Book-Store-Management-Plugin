@@ -10,8 +10,19 @@ jQuery(document).ready(function(){
     jQuery("#checkAll").click(function(){
         jQuery('input:checkbox').not(this).prop('checked', this.checked);
     });
+    
+    jQuery(".confirm_order_button").on('click', function(){
+        disAppearConfirmAlert();
+    });
+
+    jQuery(".bg_opacity").on('click', function(){
+        disAppearConfirmAlert();
+    });
 
 
-
+    function disAppearConfirmAlert(){
+        jQuery("#submitedSucess").fadeOut();
+        jQuery(".bg_opacity").fadeOut();
+    }
 
 })
