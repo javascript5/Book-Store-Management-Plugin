@@ -65,17 +65,27 @@ function initial_database()
         dbDelta($sql);
         add_option('pf_parts_db_version', $pf_parts_db_version);
     }
+
+    add_role(
+        'manager_user_guide',
+        __('Manager User Guide'),
+        array(
+            'read' => true, // true allows this capability
+        )
+    );
+
+    $role = get_role('manager_user_guide');
+    $role->add_cap('manage_options');
 }
 
-register_uninstall_hook(__FILE__, 'your_prefix_uninstall');
+register_uninstall_hook(__FILE__, 'deleteDatabase');
 
 // And here goes the uninstallation function:
-function your_prefix_uninstall()
+function deleteDatabase()
 {
     //  codes to perform during unistallation
     $free_book_table = $GLOBALS['wpdb']->prefix . 'free_books';
     $sale_book_table = $GLOBALS['wpdb']->prefix . 'sale_books';
-
     $GLOBALS['wpdb']->query("DROP TABLE IF EXISTS `" . $free_book_table . "`");
     $GLOBALS['wpdb']->query("DROP TABLE IF EXISTS `" . $sale_book_table . "`");
 }
@@ -107,7 +117,8 @@ function updateStatus($table_name)
     }
 }
 
-function multipleUpdateStatus($table_name){
+function multipleUpdateStatus($table_name)
+{
     if (isset($_POST['multiple_approvement'])) {
         if (isset($_POST['id'])) {
             foreach ($_POST['id'] as $id) {
@@ -125,7 +136,6 @@ function multipleUpdateStatus($table_name){
         }
     }
 }
-
 
 function statusToOptionList($status)
 {
@@ -180,6 +190,13 @@ function handleAddress()
 
     </script>
     <?php
+}
+
+function get_current_user_role()
+{
+    $user = wp_get_current_user();
+    $roles = (array) $user->roles;
+    return $roles[0];
 }
 
 function test_input($data)

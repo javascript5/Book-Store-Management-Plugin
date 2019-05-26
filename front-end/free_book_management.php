@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="<?php echo plugin_dir_url(dirname(__FILE__)); ?>style/admin-panel.css" />
+<?php echo get_role( $role ); ?>
 <form method="post" class="panel-form">
     <h1>ระบบตรวจสอบการแจกหนังสือฟรี</h1>
         <table class=" table-style">
