@@ -165,13 +165,9 @@ function handleAddress()
 require 'load-script.php';
 
 //Free Books backend
-require 'back-end/free-book-admin-page.php';
-
-//front end form
-require 'front-end/front-end-free-book-form.php';
+require 'back-end/initial_free_book.php';
+require 'front-end/free_book_shortcode.php';
 
 //Free Books backend
-require 'back-end/sale-book-admin-page.php';
-
-//front end form
-require 'front-end/front-end-sale-book-form.php';
+require 'back-end/initial_sale_book.php';
+require 'front-end/sale_book_shortcode.php';

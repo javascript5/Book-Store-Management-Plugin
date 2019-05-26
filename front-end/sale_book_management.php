@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?php echo plugin_dir_url(dirname(__FILE__)); ?>style/admin-panel.css" />
 <form method="post" class="panel-form">
-    <h1>ระบบตรวจสอบการแจกหนังสือฟรี</h1>
+    <h1>ระบบตรวจสอบการขายหนังสือ</h1>
         <table class=" table-style">
             <thead>
                 <tr>
@@ -11,14 +11,6 @@
 
                 <th scope="col">
                     Status
-                </th>
-
-                <th scope="col">
-                    Account Number
-                </th>
-
-                <th scope="col">
-                    Broker
                 </th>
 
                 <th scope="col">
@@ -36,6 +28,11 @@
                 <th scope="col">
                     Tel
                 </th>
+
+                <th scope="col">
+                    Tel-2
+                </th>
+
 
                 <th scope="col">
                     Email
@@ -63,17 +60,6 @@ foreach ($results as $row) {
 
 
                     <td>
-                        <?php echo $row->account_number; ?>
-                    </td>
-
-
-
-                    <td>
-                        <?php echo $row->broker; ?>
-                    </td>
-
-
-                    <td>
                         <?php echo $row->firstname; ?>
                     </td>
 
@@ -96,12 +82,16 @@ foreach ($results as $row) {
                     </td>
 
                     <td>
+                        <?php echo $row->backup_tel; ?>
+                    </td>
+
+                    <td>
                         <?php echo $row->email; ?>
                     </td>
 
                     <td>
-                        <a href="<?php echo $row->facebook_name; ?>">
-                        <?php echo $row->facebook_name; ?>
+                        <a href="<?php echo $row->facebook_name; ?>" target="_blank">
+                            <?php echo $row->facebook_name; ?>
                         </a>
                     </td>
                 </tr>

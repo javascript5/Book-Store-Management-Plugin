@@ -1,5 +1,5 @@
 <?php
-function free_book_menu() {
+function regis_free_book_menu() {
     add_menu_page(
         __( 'ระบบตรวจสอบการแจกหนังสือ(ฟรี)', 'textdomain' ),
         'ระบบตรวจสอบการแจกหนังสือ(ฟรี)',
@@ -10,4 +10,12 @@ function free_book_menu() {
         1
     );
 }
-add_action( 'admin_menu', 'free_book_menu' );
+add_action( 'admin_menu', 'regis_free_book_menu' );
+function wp_free_book_manager(){
+    $table_name = "wp_free_books";
+    $results =  $GLOBALS['wpdb']->get_results( "SELECT * FROM $table_name");
+    require dirname(__DIR__, 1).'/front-end/free_book_management.php';
+    deleteItem($table_name);
+    updateStatus($table_name);
+}
+?>

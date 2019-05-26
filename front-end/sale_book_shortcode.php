@@ -2,6 +2,7 @@
 function sale_books_form($atts)
 {
     ?>
+
 <div class="sale_book_id book_tab" style="display:none">
 <form method="post" action="<?php echo  get_permalink($page_id); ?>" class="book_form animated bounceInUp">
 	<div class="browser_tab">
@@ -10,9 +11,6 @@ function sale_books_form($atts)
             <div class="circle red"></div>
             <div class="circle yellow"></div>
         </div>
-    </div>
-    <div id="submitedSucess" class="sucess alert max-width">
-        เพิ่มข้อมูลเรียบร้อยแล้ว
     </div>
     <div>
         <label>ชื่อจริง <span>*</span></label>
@@ -98,7 +96,8 @@ handleAddress();
 
         echo "
         <script>
-            jQuery('#submitedSucess').css({ 'display': 'block' });
+            jQuery('#submitedSucess').fadeIn(900);
+            jQuery('.bg_opacity').fadeIn(900);
         </script>
         ";
 
