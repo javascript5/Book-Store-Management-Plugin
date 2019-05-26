@@ -23,12 +23,12 @@ function free_books_form($atts)
                 </g>
             </svg>
             </div>
-           <div><p>เพิ่มข้อมูลเรียบร้อยแล้ว</p></div>
+           <div><p>ได้รับข้อมูลเรียบร้อยแล้ว<br> เราจะติดต่อกลับไปภายใน 24ชม.</p></div>
            <div><a href="#" class="confirm_order_button">ตกลง</a></div>
     </div>
     <div class="bg_opacity"></div>
 
-<form id="myForm" method="post" action="<?php echo plugin_dir_url(dirname(__FILE__)); ?>back-end/back-end-submited-free-book-form.php" class="book_form animated bounceInUp">
+<form id="myForm" method="post" action="" class="book_form animated bounceInUp">
     <div class="browser_tab">
         <div class="circle_wrapper">
             <div class="circle green"></div>
@@ -114,11 +114,57 @@ function free_books_form($atts)
 
 </form>
 </div>
+
 <?php
 
-handleAddress();
-    
+    handleAddress();
+    if (isset($_POST['free_book_submited'])) {
+        $table_name = "wp_free_books";
+        $account_number = test_input($_POST["account_number"]);
+        $broker = test_input($_POST['broker']);
+        $firstname = test_input($_POST['firstname']);
+        $lastname = test_input($_POST['lastname']);
+        $province = test_input($_POST['province']);
+        $amphoe = test_input($_POST['amphoe']);
+        $zip_code = test_input($_POST['zip_code']);
+        $place = test_input($_POST['place']);
+        $tel = test_input($_POST['tel']);
+        $email = test_input($_POST['email']);
+        $facebook_name = test_input($_POST['facebook_name']);
+        $count = $GLOBALS['wpdb']->get_var("SELECT COUNT(*) FROM $table_name WHERE account_number = '$account_number' OR firstname = '$firstname' AND lastname = '$lastname' OR email = '$email'");
+
+        if ($count > 0) {
+            echo "
+                    <script>
+                        jQuery('#duplicateRecordErr').css({'display':'block'});
+                    </script>
+                ";
+        } else {
+            $sql = $GLOBALS['wpdb']->insert($table_name, array(
+                "firstname" => $firstname,
+                "lastname" => $lastname,
+                "province" => $province,
+                "amphoe" => $amphoe,
+                "zip_code" => $zip_code,
+                "place" => $place,
+                "account_number" => $account_number,
+                "broker" => $broker,
+                "email" => $email,
+                "tel" => $tel,
+                "facebook_name" => $facebook_name,
+                "status" => false,
+            ));
+
+            echo "
+        <script>
+            jQuery('select ,input').val('');
+            jQuery('#submitedSucess').fadeIn(900);
+            jQuery('.bg_opacity').fadeIn(900);
+        </script>
+        ";
+        }
+    }
 
 }
-add_shortcode('free_books', 'free_books_form');
 
+add_shortcode('free_books', 'free_books_form');

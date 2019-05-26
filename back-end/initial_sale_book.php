@@ -18,4 +18,5 @@ function wp_sale_book_manager(){
     require dirname(__DIR__, 1).'/front-end/sale_book_management.php';
     deleteItem($table_name);
     updateStatus($table_name);
+    multipleUpdateStatus($table_name);
 }

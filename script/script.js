@@ -19,6 +19,10 @@ jQuery(document).ready(function(){
         disAppearConfirmAlert();
     });
 
+    jQuery('#myForm').on('submit', function(e){
+        // e.preventDefault();
+    })
+
 
     function disAppearConfirmAlert(){
         jQuery("#submitedSucess").fadeOut();

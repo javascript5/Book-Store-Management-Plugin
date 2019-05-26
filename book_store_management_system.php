@@ -107,6 +107,26 @@ function updateStatus($table_name)
     }
 }
 
+function multipleUpdateStatus($table_name){
+    if (isset($_POST['multiple_approvement'])) {
+        if (isset($_POST['id'])) {
+            foreach ($_POST['id'] as $id) {
+                $GLOBALS['wpdb']->update($table_name, array('status' => 1), array('id' => $id));
+            }
+            echo "<meta http-equiv='refresh' content='0'>";
+        }
+    }
+    if (isset($_POST['multiple_rejection'])) {
+        if (isset($_POST['id'])) {
+            foreach ($_POST['id'] as $id) {
+                $GLOBALS['wpdb']->update($table_name, array('status' => 0), array('id' => $id));
+            }
+            echo "<meta http-equiv='refresh' content='0'>";
+        }
+    }
+}
+
+
 function statusToOptionList($status)
 {
     if ($status == 0) {
@@ -160,6 +180,14 @@ function handleAddress()
 
     </script>
     <?php
+}
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 
 require 'load-script.php';

@@ -108,6 +108,7 @@ foreach ($results as $row) {
                 <?php }?>
             </tbody>
         </table>
-
+        <input type="submit" name="multiple_approvement" value="อนุมัติ" class="remove_item_button btn btn-success" style="float:left;">
+        <input type="submit" name="multiple_rejection" value="ไม่อนุมัติ" class="remove_item_button btn btn-danger" style="float:left;">
         <input type="submit" name="delete" value="ลบข้อมูล" class="remove_item_button btn btn-danger">
     </form>

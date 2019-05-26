@@ -4,7 +4,7 @@ function sale_books_form($atts)
     ?>
 
 <div class="sale_book_id book_tab" style="display:none">
-<form method="post" action="<?php echo  get_permalink($page_id); ?>" class="book_form animated bounceInUp">
+<form method="post" id="myForm" action="" class="book_form animated bounceInUp">
 	<div class="browser_tab">
         <div class="circle_wrapper">
             <div class="circle green"></div>
@@ -96,6 +96,7 @@ handleAddress();
 
         echo "
         <script>
+            jQuery('select ,input').val('');
             jQuery('#submitedSucess').fadeIn(900);
             jQuery('.bg_opacity').fadeIn(900);
         </script>

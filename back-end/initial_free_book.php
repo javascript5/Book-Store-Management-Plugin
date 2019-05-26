@@ -17,5 +17,6 @@ function wp_free_book_manager(){
     require dirname(__DIR__, 1).'/front-end/free_book_management.php';
     deleteItem($table_name);
     updateStatus($table_name);
+    multipleUpdateStatus($table_name);
 }
 ?>
