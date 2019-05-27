@@ -4,6 +4,7 @@ function free_books_form($atts)
     ?>
 <div class="free_book_id book_tab">
 <script src="<?php echo plugin_dir_url(dirname(__FILE__)); ?>script/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <link rel="stylesheet" href="<?php echo plugin_dir_url(dirname(__FILE__)); ?>style/style.css" />
 <link rel="stylesheet" href="<?php echo plugin_dir_url(dirname(__FILE__)); ?>style/animate.css" />
     <div id="submitedSucess">
