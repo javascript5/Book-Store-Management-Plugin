@@ -3,7 +3,7 @@ function sale_books_form($atts)
 {
     ?>
 
-<div class="sale_book_id book_tab" style="display:none">
+<div class="sale_book_id book_tab" style="display:block">
 <form method="post" id="myForm" action="" class="book_form animated bounceInUp">
 	<div class="browser_tab">
         <div class="circle_wrapper">
@@ -61,6 +61,11 @@ function sale_books_form($atts)
         <input type="email" name="email" required>
     </div>
 
+    <div class="max-width">
+        <label>จำนวนหนังสือ <span>*</span></label>
+        <input type="number" name="piece" required>
+    </div>
+
 
     <div class="max-width">
         <button type="submit" name="sale_book_submited">ส่งข้อมูล</button>
@@ -80,6 +85,7 @@ handleAddress();
         $tel = $_POST['tel'];
         $backup_tel = $_POST['backup_tel'];
         $email = $_POST['email'];
+        $piece = $_POST['piece'];
 
         $sql = $GLOBALS['wpdb']->insert($table_name, array(
             "firstname" => $firstname,
@@ -92,6 +98,7 @@ handleAddress();
             "tel" => $tel,
             "backup_tel" => $backup_tel,
             "status" => false,
+            "piece" => $piece,
         ));
 
         echo "

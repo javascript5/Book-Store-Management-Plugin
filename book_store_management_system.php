@@ -217,3 +217,4 @@ require 'front-end/free_book_shortcode.php';
 //Free Books backend
 require 'back-end/initial_sale_book.php';
 require 'front-end/sale_book_shortcode.php';
+

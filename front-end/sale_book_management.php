@@ -39,7 +39,7 @@
                 </th>
 
                 <th scope="col">
-                    Facebook
+                    Piece
                 </th>
                 </tr>
             </thead>
@@ -90,9 +90,7 @@ foreach ($results as $row) {
                     </td>
 
                     <td>
-                        <a href="<?php echo $row->facebook_name; ?>" target="_blank">
-                            <?php echo $row->facebook_name; ?>
-                        </a>
+                            <?php echo $row->piece; ?>
                     </td>
                 </tr>
                 <?php }?>
