@@ -151,9 +151,17 @@ function handleAddress()
 {
     ?>
     <script>
+    var lang = jQuery('html').attr('lang');
+    if(lang == "en-US"){
+        var province_dir = '<?php echo plugin_dir_url(__FILE__); ?>/json/province-en.json';
+        var amphoes_dir = '<?php echo plugin_dir_url(__FILE__); ?>/json/amphoes-en.json';
+    }else{
+        var province_dir = '<?php echo plugin_dir_url(__FILE__); ?>/json/province.json';
+        var amphoes_dir = '<?php echo plugin_dir_url(__FILE__); ?>/json/amphoes.json';
+    }
     jQuery.ajax({
         type: 'GET',
-        url: '<?php echo plugin_dir_url(__FILE__); ?>/json/province.json',
+        url: province_dir,
         data: { get_param: 'value' },
         dataType: 'json',
         success: function (data) {
@@ -174,7 +182,7 @@ function handleAddress()
         var pidSelected =  jQuery('option:selected', this).attr('pid');
         jQuery.ajax({
         type: 'GET',
-        url: '<?php echo plugin_dir_url(__FILE__); ?>/json/amphoes.json',
+        url: amphoes_dir,
         data: { get_param: 'value' },
         dataType: 'json',
         success: function (data) {
@@ -217,4 +225,3 @@ require 'front-end/free_book_shortcode.php';
 //Free Books backend
 require 'back-end/initial_sale_book.php';
 require 'front-end/sale_book_shortcode.php';
-

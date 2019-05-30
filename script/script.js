@@ -30,58 +30,79 @@ jQuery(document).ready(function () {
     }
 
 
-    var lang = $(html).attr('lang'); 
-    if(lang == "en-US"){
-    $('#myForm > div > label').each(function () {
-        var text = $(this).text();
-        switch (text) {
-            case "ชื่อจริง *":
+    var lang = jQuery('html').attr('lang');
+    if (lang == "en-US") {
+        jQuery('#myForm > div > select > option').each(function () {
+            var text = jQuery(this).text();
+            switch (text) {
+                case "เลือกโบรกเกอร์":
+                    // code block
+                    jQuery(this).html('Select Broker');
+                    break;
+                case "เลือกจังหวัด":
+                    // code block
+                    jQuery(this).html('Select Province');
+                    break;
+                case "เลือกอำเภอ":
+                    // code block
+                    jQuery(this).html('Select District');
+                    break;
+                default:
+            }
+        });
+        jQuery('#myForm > div > label').each(function () {
+            var text = jQuery(this).text();
+            switch (text) {
+                case "ชื่อจริง *":
+                    // code block
+                    jQuery(this).html('First Name <span>*</span>');
+                    break;
+                case "นามสกุล *":
+                    // code block
+                    jQuery(this).html('Last Name <span>*</span>');
+                    break;
+                case "โบรกเกอร์ *":
+                    jQuery(this).html('Broker <span>*</span>');
+                    break;
+                case "จังหวัด *":
+                    // code block
+                    jQuery(this).html('Province <span>*</span>');
+                    break;
+                case "อำเภอ / เขต *":
+                    // code block
+                    jQuery(this).html('District <span>*</span>');
+                    break;
+                case "รหัสไปรษณีย์ *":
+                    // code block
+                    jQuery(this).html('ZIP Code <span>*</span>');
+                    break;
+                case "ที่อยู่ *":
+                    // code block
+                    jQuery(this).html('Address <span>*</span>');
+                    break;
+                case "เบอร์โทรศัพท์ *":
+                    // code block
+                    jQuery(this).html('Phone Number <span>*</span>');
+                    break;
+                case "อีเมล์ *":
+                    // code block
+                    jQuery(this).html('Email <span>*</span>');
+                    break;
+                case "Facebook Url ของท่าน *":
+                    // code block
+                    jQuery(this).html('Facebook Url <span>*</span>');
+                    break;
+                case "จำนวนหนังสือ *":
+                    // code block
+                    jQuery(this).html('Piece of book <span>*</span>');
+                    break;
+                case "เบอร์โทรศัพท์ (สำรอง)":
+                    jQuery(this).html('Phone Number (2) <span>*</span>');
+                    break;
+                default:
                 // code block
-                $(this).html('First Name <span>*</span>');
-                break;
-            case "นามสกุล *":
-                // code block
-                $(this).html('Last Name <span>*</span>');
-                break;
-            case "จังหวัด *":
-                // code block
-                $(this).html('Province <span>*</span>');
-                break;
-            case "อำเภอ / เขต *":
-                // code block
-                $(this).html('District <span>*</span>');
-                break;
-            case "รหัสไปรษณีย์ *":
-                // code block
-                $(this).html('ZIP Code <span>*</span>');
-                break;
-            case "ที่อยู่ *":
-                // code block
-                $(this).html('Address <span>*</span>');
-                break;
-            case "เบอร์โทรศัพท์ *":
-                // code block
-                $(this).html('Phone Number <span>*</span>');
-                break;
-            case "อีเมล์ *":
-                // code block
-                $(this).html('Email <span>*</span>');
-                break;
-            case "Facebook Url ของท่าน *":
-                // code block
-                $(this).html('Facebook Url <span>*</span>');
-                break;
-            case "จำนวนหนังสือ *":
-                // code block
-                $(this).html('Piece <span>*</span>');
-                break;
-            case "เบอร์โทรศัพท์ (สำรอง)":
-                $(this).html('Phone Number (2) <span>*</span>');
-                break;
-            default:
-            // code block
-        }
-    });
+            }
+        });
     }
 
 

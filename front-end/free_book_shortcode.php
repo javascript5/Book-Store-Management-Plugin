@@ -3,9 +3,7 @@ function free_books_form($atts)
 {
     ?>
 <div class="free_book_id book_tab">
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="<?php echo plugin_dir_url(dirname(__FILE__)); ?>script/script.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <link rel="stylesheet" href="<?php echo plugin_dir_url(dirname(__FILE__)); ?>style/style.css" />
 <link rel="stylesheet" href="<?php echo plugin_dir_url(dirname(__FILE__)); ?>style/animate.css" />
@@ -49,7 +47,7 @@ function free_books_form($atts)
     </div>
 
     <div class="max-width">
-        <label tkey="Borker"></label>
+        <label>โบรกเกอร์</label>
         <select name="broker" required>
             <option value="">เลือกโบรกเกอร์</option>
             <option value="Hantec Global">Hantec Global</option>
@@ -119,7 +117,7 @@ function free_books_form($atts)
 </div>
 
 <?php
-
+    
     handleAddress();
     if (isset($_POST['free_book_submited'])) {
         $table_name = "wp_free_books";
