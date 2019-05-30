@@ -58,6 +58,7 @@ function initial_database()
                         tel varchar(255) DEFAULT '' NOT NULL,
                         backup_tel varchar(255) DEFAULT '' NOT NULL,
                         status tinyint(1) DEFAULT 0 NOT NULL,
+                        piece INT(1) DEFAULT 0 NOT NULL,
                         PRIMARY KEY  (id)
                         ) $charset_collate;";
 

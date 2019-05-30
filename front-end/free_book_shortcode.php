@@ -25,7 +25,7 @@ function free_books_form($atts)
             </svg>
             </div>
            <div><p>ได้รับข้อมูลเรียบร้อยแล้ว<br> เราจะติดต่อกลับไปภายใน 24ชม.</p></div>
-           <div><a href="#" class="confirm_order_button">ตกลง</a></div>
+           <div><a href="javascript:void(0)" class="confirm_order_button">ตกลง</a></div>
     </div>
     <div class="bg_opacity"></div>
 
