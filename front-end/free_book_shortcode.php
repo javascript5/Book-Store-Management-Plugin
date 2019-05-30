@@ -47,7 +47,7 @@ function free_books_form($atts)
     </div>
 
     <div class="max-width">
-        <label>โบรกเกอร์</label>
+        <label>โบรกเกอร์ <span>*</span></label>
         <select name="broker" required>
             <option value="">เลือกโบรกเกอร์</option>
             <option value="Hantec Global">Hantec Global</option>
