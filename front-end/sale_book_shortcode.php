@@ -3,7 +3,7 @@ function sale_books_form($atts)
 {
     ?>
 
-<div class="sale_book_id book_tab" style="display:block">
+<div class="sale_book_id book_tab" style="display:none">
 <form method="post" id="myForm" action="" class="book_form animated bounceInUp">
 	<div class="browser_tab">
         <div class="circle_wrapper">

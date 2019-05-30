@@ -1,0 +1,15 @@
+{ 
+    "โบรกเกอร์": "Borker", 
+    "First Name": "ชื่อจริง",
+    "Last Name": "นามสกุล",
+    "Province": "จังหวัด",
+    "District": "อำเภอ / เขต",
+    "ZIP Code":"รหัสไปรษณีย์",
+    "Address":"ที่อยู่",
+    "Tel":"เบอร์โทรศัพท์",
+    "Email":"อีเมล์",
+    "Facebook Url":"Facebook Url ของท่าน",
+    "Tel - 2":"เบอร์โทรศัพท์ (สำรอง)",
+    "Piece of book":"จำนวนหนังสือ",
+    "Select Province":"เลือกจังหวัด"
+}

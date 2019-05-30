@@ -3,7 +3,9 @@ function free_books_form($atts)
 {
     ?>
 <div class="free_book_id book_tab">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="<?php echo plugin_dir_url(dirname(__FILE__)); ?>script/script.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <link rel="stylesheet" href="<?php echo plugin_dir_url(dirname(__FILE__)); ?>style/style.css" />
 <link rel="stylesheet" href="<?php echo plugin_dir_url(dirname(__FILE__)); ?>style/animate.css" />
@@ -47,7 +49,7 @@ function free_books_form($atts)
     </div>
 
     <div class="max-width">
-        <label>โบรกเกอร์</label>
+        <label tkey="Borker"></label>
         <select name="broker" required>
             <option value="">เลือกโบรกเกอร์</option>
             <option value="Hantec Global">Hantec Global</option>
@@ -104,7 +106,7 @@ function free_books_form($atts)
     </div>
 
     <div class="max-width">
-        <label> Facebook Url ของท่าน <span>*</span></label>
+        <label>Facebook Url ของท่าน <span>*</span></label>
         <input type="text" name="facebook_name" value="<?php echo $_POST['facebook_name'] ?>" placeholder="ex. https://www.facebook.com/Username" required>
     </div>
 

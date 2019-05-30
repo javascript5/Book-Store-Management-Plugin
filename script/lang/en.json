@@ -1,0 +1,15 @@
+{ 
+    "Borker": "Borker", 
+    "First Name": "First Name",
+    "Last Name": "Last Name",
+    "Province": "Province",
+    "District": "District",
+    "ZIP Code":"ZIP Code",
+    "Address":"Address",
+    "Tel":"Tel",
+    "Email":"Email",
+    "Facebook Url":"Facebook Url",
+    "Tel - 2":"Tel(2)",
+    "Piece of book":"Piece of book",
+    "Select Province":"Select Province"
+}
