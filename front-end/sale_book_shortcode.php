@@ -12,6 +12,12 @@ function sale_books_form($atts)
             <div class="circle yellow"></div>
         </div>
     </div>
+    
+    <div class="max-width">
+        <label>จำนวนหนังสือที่ต้องการสั่งซื้อ (เล่ม) <span>*</span></label>
+        <input type="number" name="piece" min="1" required>
+    </div>
+
     <div>
         <label>ชื่อจริง <span>*</span></label>
         <input type="text" name="firstname" required>
@@ -60,12 +66,6 @@ function sale_books_form($atts)
         <label>อีเมล์ <span>*</span></label>
         <input type="email" name="email" required>
     </div>
-
-    <div class="max-width">
-        <label>จำนวนหนังสือ <span>*</span></label>
-        <input type="number" name="piece" min="1" required>
-    </div>
-
 
     <div class="max-width">
         <button type="submit" name="sale_book_submited">ส่งข้อมูล</button>
