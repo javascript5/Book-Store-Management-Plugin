@@ -94,7 +94,7 @@ jQuery(document).ready(function () {
                     // code block
                     jQuery(this).html('Facebook Url <span>*</span>');
                     break;
-                case "จำนวนหนังสือ *":
+                case "จำนวนหนังสือที่ต้องการสั่งซื้อ (เล่ม) *":
                     // code block
                     jQuery(this).html('Piece of book <span>*</span>');
                     break;
