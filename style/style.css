@@ -13,7 +13,7 @@
     top: 35%;
     left: 0;
     right: 0;
-    width: 35% !important;
+    width: 35%;
     text-align: center;
     margin: auto;
     background-color: #fff;
@@ -312,5 +312,9 @@ select:-webkit-autofill:focus {
     .book_form > div > button{
         width: 100%;
         margin-top:10px;
+    }
+
+    #submitedSucess{
+        width: 75%;
     }
 }
