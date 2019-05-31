@@ -63,7 +63,7 @@ function sale_books_form($atts)
 
     <div class="max-width">
         <label>จำนวนหนังสือ <span>*</span></label>
-        <input type="number" name="piece" required>
+        <input type="number" name="piece" min="1" required>
     </div>
 
 
