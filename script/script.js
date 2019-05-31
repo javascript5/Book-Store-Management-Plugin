@@ -33,7 +33,8 @@ jQuery(document).ready(function () {
     var lang = jQuery('html').attr('lang');
     if (lang == "en-US") {
 		jQuery('[name=free_book_submited]').text('Submit');
-		jQuery('[name=sale_book_submited]').text('Submit');
+        jQuery('[name=sale_book_submited]').text('Submit');
+        jQuery('[name=account_number]').attr('placeholder', "Please enter your account number");
         jQuery('#myForm > div > select > option').each(function () {
             var text = jQuery(this).text();
             switch (text) {
